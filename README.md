@@ -1,3 +1,3 @@
 # BrightPoint
 
-![BrightPoint](https://imgur.com/a/vHgH06W)
+![BrightPoint](https://i.imgur.com/QDBhDWv.png)
