@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "244783216245",
+    "firebase_url": "https://brightpoint-ac0ad.firebaseio.com",
+    "project_id": "brightpoint-ac0ad",
+    "storage_bucket": "brightpoint-ac0ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:244783216245:android:b9e0656b4f8a27fb",
+        "android_client_info": {
+          "package_name": "app.brightpoint.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "244783216245-ld5ci8s19te33ncdiu31nepqdfbvftp3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.brightpoint.com",
+            "certificate_hash": "c741901066f607ec05f39310bb2a6ece6df7b9e5"
+          }
+        },
+        {
+          "client_id": "244783216245-nltptiulantdmsofoj5iuveol9kn4r4s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuqSas980BWgR3Z4H8ZIboJ9R0JkybSnA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "244783216245-nltptiulantdmsofoj5iuveol9kn4r4s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

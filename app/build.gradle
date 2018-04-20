@@ -1,0 +1,126 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "app.brightpoint.com"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "BASE_URL", "\"http://happydeliv.com\""
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main.java.srcDirs += 'build/generated/source/greendao'
+    }
+}
+
+kapt {
+    generateStubs = true
+}
+
+//greendao {
+//    targetGenDir 'src/main/java'
+//    schemaVersion 1
+//}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    testImplementation 'junit:junit:4.12'
+
+    // Android runner and rules support
+    androidTestImplementation(androidRunner) {
+        exclude module: 'support-annotations'
+    }
+    androidTestImplementation(androidRules) {
+        exclude module: 'support-annotations'
+    }
+
+    // Espresso support
+    androidTestImplementation(espressoDependencies.espressoCore) {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+
+    //Support Dependencies
+    implementation supportDependencies.appcompatv7
+    implementation supportDependencies.design
+    implementation supportDependencies.supportv4
+    implementation supportDependencies.recycleview
+    implementation supportDependencies.cardview
+    implementation supportDependencies.contraintLayout
+    implementation supportDependencies.multidex
+
+    //RxJava 2
+    implementation rxDependencies.rxJava
+    implementation rxDependencies.rxAndroid
+
+    //Retrofit Dependencies
+    implementation retrofitDependencies.retrofit
+    implementation retrofitDependencies.converterGson
+    implementation retrofitDependencies.rxAdapterJava
+
+    //Okhttp Dependencies
+    implementation okhttpDependencies.okhttp
+    implementation okhttpDependencies.loggingInterceptor
+
+    //Dagger Dependencies
+    implementation daggerDependencies.dagger
+    implementation daggerDependencies.daggerAndroidSupport
+    kapt daggerDependencies.daggerCompiler
+    kapt daggerDependencies.daggerAndroidProcessor
+
+    //Firebase Dependencies
+    implementation firebaseDependencies.core
+    implementation firebaseDependencies.messaging
+    implementation firebaseDependencies.config
+    implementation firebaseDependencies.auth
+    implementation firebaseDependencies.database
+    implementation firebaseDependencies.perf
+    implementation firebaseDependencies.jobdispatcher
+
+    //Debug compile
+    debugImplementation debugDB
+
+    //Bottom Bar
+    implementation bottomBar
+
+    //PinView
+    implementation pinView
+
+    //Circular Image
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    //GreenDao
+    implementation greenDao
+
+    //Anko Layout
+    implementation ankoLayoutDependencies.ankoLayout
+
+    //Image Loader
+    implementation picasso
+
+    //Saripaar Layout Validation
+    implementation saripaarValidation
+
+    //BeSlider
+    implementation beslider
+
+    //Ted Permission
+    implementation tedPermission
+}
+apply plugin: 'com.google.gms.google-services'
