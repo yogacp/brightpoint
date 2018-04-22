@@ -2,6 +2,7 @@ package app.brightpoint.com.di.module
 
 import app.brightpoint.com.BrightPointApp
 import app.brightpoint.com.BuildConfig
+import app.brightpoint.com.api.NetworkServices
 import dagger.Module
 import dagger.Provides
 import okhttp3.Cache
@@ -56,5 +57,10 @@ class NetworkModule(val beningmartApp: BrightPointApp) {
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
         return builder.build()
+    }
+
+    @Provides @Singleton
+    fun provideNetworkServices(@Named("brightpoint_rest") restAdapter: Retrofit): NetworkServices {
+        return restAdapter.create<NetworkServices>(NetworkServices::class.java)
     }
 }

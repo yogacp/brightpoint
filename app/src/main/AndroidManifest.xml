@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.brightpoint.com">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
         android:name=".BrightPointApp"
@@ -24,7 +30,63 @@
             android:name=".ui.activity.login.LoginActivity"
             android:theme="@style/ThemeNoActionBar"
             android:screenOrientation="portrait"
+            android:label="Bright Point Login" />
+
+        <activity
+            android:name=".ui.activity.createaccount.CreateAccountActivity"
+            android:theme="@style/ThemeNoActionBar"
+            android:screenOrientation="portrait"
+            android:label="Bright Point Register" />
+
+        <activity
+            android:name=".ui.activity.homepage.HomepageActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
             android:label="Bright Point" />
+
+        <activity
+            android:name=".ui.activity.NearestSPBU.NearestSPBUActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            android:label="Nearest SPBU" />
+
+        <activity
+            android:name=".ui.activity.DetailSPBU.DetailSPBUActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            android:label="Detail SPBU" />
+
+        <activity
+            android:name=".ui.activity.bookawash.BookAWashActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            android:label="Book A Wash" />
+
+        <activity
+            android:name=".ui.activity.findbrightwash.FindBrightWashActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            android:label="Nearest Outlet" />
+
+        <activity
+            android:name=".ui.activity.detailbrightwash.DetailBrightWashActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            android:label="Book a Schedule" />
+
+        <activity
+            android:name=".ui.activity.washschedule.WashScheduleActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            android:label="Wash Schedule" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/GOOGLE_API_KEY"/>
 
     </application>
 

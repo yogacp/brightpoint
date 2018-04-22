@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <app.beslider.com.ui.Slider
+            android:id="@+id/besliderDetailSpbu"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/defaultWhite"
+            app:beslider_animateIndicators="true"
+            app:beslider_defaultImage="1"
+            app:beslider_emptyImage="@layout/banner_empty"
+            app:beslider_indicatorSize="8dp"
+            app:beslider_interval="5000"
+            app:beslider_loopSlides="true"
+            app:beslider_customSelectedIndicator="@drawable/ic_banner_indicator_selected"
+            app:beslider_customUnselectedIndicator="@drawable/ic_banner_indicator_unselected" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/besliderDetailSpbu"
+            android:layout_above="@+id/btnSeeLocation">
+
+            <LinearLayout
+                android:id="@+id/llFasilitas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FASILITAS"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivCarwashFacility"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="5dp"
+                        android:visibility="gone"
+                        android:contentDescription="@string/nearest_spbu_facility_carwash"
+                        android:src="@drawable/ic_carwash_facility"/>
+
+                    <ImageView
+                        android:id="@+id/ivOilFacility"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="5dp"
+                        android:visibility="gone"
+                        android:contentDescription="@string/nearest_spbu_facility_oil"
+                        android:src="@drawable/ic_oil_facility"/>
+
+                    <ImageView
+                        android:id="@+id/ivCSFacility"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="5dp"
+                        android:visibility="gone"
+                        android:contentDescription="@string/nearest_spbu_facility_cs"
+                        android:src="@drawable/ic_convenience_store_facility"/>
+
+                    <ImageView
+                        android:id="@+id/ivMosqueFacility"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="5dp"
+                        android:visibility="gone"
+                        android:contentDescription="@string/nearest_spbu_facility_mosque"
+                        android:src="@drawable/ic_mosque_facility"/>
+
+                    <ImageView
+                        android:id="@+id/ivToiletFacility"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="5dp"
+                        android:visibility="gone"
+                        android:contentDescription="@string/nearest_spbu_facility_toilet"
+                        android:src="@drawable/ic_toilet_facility"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llProducts"
+                android:layout_below="@+id/llFasilitas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PRODUCTS"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvProductList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnSeeLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bp_orange"
+            android:text="SEE LOCATION"
+            android:textSize="20sp"
+            android:textColor="@color/defaultWhite"/>
+
+    </RelativeLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avDetailSpbuIndicator"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        app:indicatorColor="#FF248ec2"
+        app:indicatorName="BallClipRotateMultipleIndicator" />
+
+</RelativeLayout>

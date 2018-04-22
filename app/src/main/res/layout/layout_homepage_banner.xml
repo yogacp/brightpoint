@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <app.beslider.com.ui.Slider
+        android:id="@+id/beslider"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/defaultWhite"
+        app:beslider_animateIndicators="true"
+        app:beslider_defaultImage="1"
+        app:beslider_emptyImage="@layout/banner_empty"
+        app:beslider_indicatorSize="8dp"
+        app:beslider_interval="5000"
+        app:beslider_loopSlides="true"
+        app:beslider_customSelectedIndicator="@drawable/ic_banner_indicator_selected"
+        app:beslider_customUnselectedIndicator="@drawable/ic_banner_indicator_unselected" />
+
+</RelativeLayout>

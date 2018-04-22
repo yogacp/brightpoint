@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/bp_black"
+                android:textSize="20sp"
+                android:hint="Brightwash SPBU Slipi"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/bp_black"
+                android:textSize="14sp"
+                android:hint="Jl. Letjen S. Parman Blok G No.Kav 69, 11410, RT.3/RW.3, Slipi, Palmerah, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta" />
+
+            <TextView
+                android:id="@+id/tvCapacity"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/bp_black"
+                android:textSize="14sp"
+                android:hint="Capacity: 2 Cars"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvCurrentQueue"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/bp_black"
+                android:textSize="20sp"
+                android:hint="Total Queue: 2"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llFasilitas"
+            android:layout_below="@id/llInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnSeeLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_orange_rounded"
+                android:textSize="14sp"
+                android:layout_marginBottom="10dp"
+                android:text="See Location"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/defaultWhite"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/bannerImage"
+            android:layout_below="@+id/llFasilitas"
+            android:layout_above="@+id/btnConfirmBooking"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/defaultWhite"
+            android:contentDescription="Banner Image" />
+
+        <Button
+            android:id="@+id/btnConfirmBooking"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bp_orange"
+            android:text="Booking"
+            android:textSize="20sp"
+            android:textColor="@color/defaultWhite"/>
+
+    </RelativeLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avDetailBwIndicator"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        app:indicatorColor="#FF248ec2"
+        app:indicatorName="BallClipRotateMultipleIndicator" />
+
+</RelativeLayout>

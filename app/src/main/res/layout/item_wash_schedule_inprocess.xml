@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/bp_orange"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:contentDescription="Carwash"
+            android:src="@drawable/ic_carwash_white"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        android:background="@color/defaultWhite" />
+
+    <LinearLayout
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvInproName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Carwash Slipi"
+            android:textStyle="bold"
+            android:textColorHint="@color/defaultWhite"
+            android:textColor="@color/defaultWhite"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tvInproCurrentQueue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Current queue: 1"
+            android:textColorHint="@color/defaultWhite"
+            android:textColor="@color/defaultWhite"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Carwash"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_calendar_white"/>
+
+            <TextView
+                android:id="@+id/tvInproDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="22-04-2018"
+                android:gravity="right"
+                android:textColorHint="@color/defaultWhite"
+                android:textColor="@color/defaultWhite"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tvInproYourQueue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Your queue no: 2"
+                android:gravity="right"
+                android:textColorHint="@color/defaultWhite"
+                android:textColor="@color/defaultWhite"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

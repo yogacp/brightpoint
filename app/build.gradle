@@ -12,7 +12,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        buildConfigField "String", "BASE_URL", "\"http://happydeliv.com\""
+        buildConfigField "String", "BASE_URL", "\"http://brightpoint.xyz\""
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -92,6 +92,14 @@ dependencies {
     implementation firebaseDependencies.database
     implementation firebaseDependencies.perf
     implementation firebaseDependencies.jobdispatcher
+
+    //Google maps
+    implementation 'com.google.android.gms:play-services-maps:15.0.0'
+    implementation 'com.google.android.gms:play-services-location:15.0.0'
+    implementation 'com.google.android.gms:play-services-location:15.0.0'
+
+    //Loading Indicator View
+    implementation aviLoadingIndicator
 
     //Debug compile
     debugImplementation debugDB

@@ -3,6 +3,7 @@ package app.brightpoint.com.di.module
 import android.app.Application
 import android.content.Context
 import app.brightpoint.com.helper.Helper
+import app.brightpoint.com.session.DataSession
 import app.brightpoint.com.utils.RxBus
 import com.google.gson.Gson
 import dagger.Module
@@ -35,4 +36,8 @@ class AppModule {
         return RxBus()
     }
 
+    @Provides @Singleton
+    internal fun provideDataSession(): DataSession {
+        return DataSession()
+    }
 }

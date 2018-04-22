@@ -17,4 +17,16 @@
 
     <style name="AppTheme.TransNav" parent="AppTheme" />
 
+    <style name="BrightPointDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColorPrimary">@color/bp_black_cc</item>
+        <item name="android:background">@color/defaultWhite</item>
+    </style>
+
+    <style name="LayoutBrightPointCardview">
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:layout_marginBottom">17dp</item>
+        <item name="android:background">@drawable/cardview_grey_shadow</item>
+    </style>
+
 </resources>

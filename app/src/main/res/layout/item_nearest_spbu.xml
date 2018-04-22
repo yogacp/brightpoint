@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="0dp"
+    android:layout_marginTop="17dp"
+    android:orientation="vertical"
+    style="@style/LayoutBrightPointCardview"
+    android:id="@+id/layoutItem"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/nearest_spbu_image"
+            android:src="@drawable/ic_nearest_spbu"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:background="@color/bp_grey" />
+
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvItemSPBUName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="SPBU Slipi"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/tvItemSPBUDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="3.6 Km"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tvItemSPBUAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Jl. Cikini Raya No. 113-115, Cikini, Men..."
+                android:textSize="14sp"/>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right">
+
+                <ImageView
+                    android:id="@+id/ivCarwashFacility"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="5dp"
+                    android:visibility="gone"
+                    android:contentDescription="@string/nearest_spbu_facility_carwash"
+                    android:src="@drawable/ic_carwash_facility_black"/>
+
+                <ImageView
+                    android:id="@+id/ivOilFacility"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="5dp"
+                    android:visibility="gone"
+                    android:contentDescription="@string/nearest_spbu_facility_oil"
+                    android:src="@drawable/ic_oil_facility_black"/>
+
+                <ImageView
+                    android:id="@+id/ivCSFacility"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="5dp"
+                    android:visibility="gone"
+                    android:contentDescription="@string/nearest_spbu_facility_cs"
+                    android:src="@drawable/ic_convenience_store_facility_black"/>
+
+                <ImageView
+                    android:id="@+id/ivMosqueFacility"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="5dp"
+                    android:visibility="gone"
+                    android:contentDescription="@string/nearest_spbu_facility_mosque"
+                    android:src="@drawable/ic_mosque_facility_black"/>
+
+                <ImageView
+                    android:id="@+id/ivToiletFacility"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="5dp"
+                    android:visibility="gone"
+                    android:contentDescription="@string/nearest_spbu_facility_toilet"
+                    android:src="@drawable/ic_toilet_facility_black"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

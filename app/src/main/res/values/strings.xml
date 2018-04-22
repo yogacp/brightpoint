@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">Bright Point</string>
+    <string name="GOOGLE_API_KEY">AIzaSyAuqSas980BWgR3Z4H8ZIboJ9R0JkybSnA</string>
+
+    <!-- Login Page -->
+    <string name="login_input_phone">No Hp</string>
+    <string name="login_input_password">Password</string>
+    <string name="login_sign_in">Masuk</string>
+    <string name="login_create_account">Belum punya akun? Daftar disini</string>
+
+    <!-- Register Page -->
+    <string name="register_input_name">Nama Lengkap</string>
+    <string name="register_input_phone">Nomor HP</string>
+    <string name="register_input_email">Email</string>
+    <string name="register_input_password">Password</string>
+    <string name="register_input_cpassword">Konfirmasi Password</string>
+    <string name="register_signup">Daftar</string>
+    <string name="register_next_login">Masuk ke Akun Anda</string>
+    <string name="register_dialog_success_title">SUKSES</string>
+    <string name="register_dialog_success_content">Akun Anda telah berhasil didaftarkan. Silahkan Login untuk masuk ke akun Anda.</string>
+
+    <!-- Home Page -->
+    <string name="homepage_nearest_spbu">Nearest SPBU</string>
+    <string name="homepage_book_a_wash">Book a Wash</string>
+    <string name="homepage_wash_schedule">Wash Schedule</string>
+    <string name="homepage_account">Account</string>
+
+    <!-- Nearest SPBU Page -->
+    <string name="nearest_spbu_image">SPBU Item</string>
+    <string name="nearest_spbu_facility_carwash">Carwash</string>
+    <string name="nearest_spbu_facility_toilet">Toilet</string>
+    <string name="nearest_spbu_facility_mosque">Mosque</string>
+    <string name="nearest_spbu_facility_cs">Convenience Store</string>
+    <string name="nearest_spbu_facility_oil">Oil</string>
+
 </resources>
