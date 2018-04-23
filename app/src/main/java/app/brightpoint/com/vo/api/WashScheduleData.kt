@@ -23,5 +23,8 @@ data class WashScheduleData(
         var spbuName: String,
         @SerializedName("current_queue")
         @Expose
-        var currentQueue: Any
+        var currentQueue: Int,
+        @SerializedName("estimation_time")
+        @Expose
+        var estimationTime: Int
 )

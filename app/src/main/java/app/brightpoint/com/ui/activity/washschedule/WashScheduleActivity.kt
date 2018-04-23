@@ -48,7 +48,7 @@ class WashScheduleActivity: BaseActivity(), WashScheduleContract.View {
     override fun setupAdapter(listData: List<WashScheduleData>) {
         rvWashScheduleList.setUp(listData, R.layout.item_wash_schedule, {
             tvName.text = it.spbuName
-            tvCurrentQueue.text = "Current Queue: ${if(it.currentQueue.equals("-")) 0 else it.currentQueue.toString().toInt()}"
+            tvCurrentQueue.text = "Current Queue: ${it.currentQueue}"
             tvDate.text = it.queueDate
 
             when(it.status) {
@@ -61,7 +61,7 @@ class WashScheduleActivity: BaseActivity(), WashScheduleContract.View {
                     tvStatus.background = ContextCompat.getDrawable(context, R.drawable.button_green_rounded)
                 }
                 "In-Progress" -> {
-                    tvStatus.text = "In Progress"
+                    tvStatus.text = "${it.estimationTime} Minutes"
                     tvStatus.background = ContextCompat.getDrawable(context, R.drawable.button_orange_rounded)
                 }
             }

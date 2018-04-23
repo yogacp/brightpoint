@@ -2,7 +2,9 @@ package app.brightpoint.com.ui.activity.DetailSPBU
 
 import android.graphics.Typeface
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import app.beslider.com.interfaces.OnSlideClickListener
 import app.beslider.com.ui.Slider
 import app.brightpoint.com.R
 import app.brightpoint.com.adapters.BesliderAdapter
@@ -110,6 +112,11 @@ class DetailSPBUActivity: BaseActivity(), DetailSPBUContract.View {
     override fun loadBanner() {
         Slider.init(ImageLoadingService())
         besliderDetailSpbu.setAdapter(BesliderAdapter(mListImages))
+        besliderDetailSpbu.setSlideClickListener(object : OnSlideClickListener{
+            override fun onSlideClick(position: Int) {
+                Log.d("Slider","Clicked")
+            }
+        })
     }
 
     override fun showLoading() {

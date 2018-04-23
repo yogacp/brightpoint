@@ -23,6 +23,7 @@ import com.google.android.gms.location.FusedLocationProviderClient
 import com.tedpark.tedpermission.rx2.TedRx2Permission
 import android.os.Looper
 import android.support.v4.app.Fragment
+import app.beslider.com.interfaces.OnSlideClickListener
 import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationServices.getFusedLocationProviderClient
@@ -74,11 +75,11 @@ class HomepageActivity : BaseActivity(), HasSupportFragmentInjector, HomepageCon
         beslider.setAdapter(BesliderAdapter(mListImages))
 
         // If there is any click event on banner image
-//        beslider.setSlideClickListener(object : OnSlideClickListener {
-//            override fun onSlideClick(position: Int) {
-//
-//            }
-//        })
+        beslider.setSlideClickListener(object : OnSlideClickListener {
+            override fun onSlideClick(position: Int) {
+                Log.d("Slider","Clicked")
+            }
+        })
     }
 
     override fun setupUIListener() {
